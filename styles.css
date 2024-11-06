@@ -1,0 +1,61 @@
+/* Reset & Base Styles */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; color: #fff; background-color: #000; line-height: 1.6; }
+a { text-decoration: none; color: inherit; }
+
+/* Layout */
+.container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 2rem 0; }
+.section { padding: 4rem 0; text-align: center; border-bottom: 1px solid #333; }
+
+/* Accent & Buttons */
+:root {
+    --accent: #f05454; /* Change this for a different accent color */
+    --gray: #2e2e2e;
+}
+
+button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 30px;
+    background: var(--accent);
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+button:hover { background: #d94444; }
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--gray), #000);
+    color: #fff;
+    padding: 6rem 0;
+}
+.hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+.hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto; }
+
+/* About the Program Section */
+.about p { font-size: 1rem; max-width: 800px; margin: 1rem auto; color: #aaa; }
+
+/* Cards for Results */
+.results { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+.card {
+    background: #1a1a1a;
+    padding: 2rem;
+    border-radius: 10px;
+    flex: 1 1 30%;
+    min-width: 250px;
+    color: #ccc;
+    border: 1px solid #333;
+}
+
+/* Conference Topics */
+.topics ul { list-style-type: none; padding: 1rem; }
+.topics li {
+    padding: 0.5rem;
+    border-bottom: 1px solid #333;
+    color: #bbb;
+}
+
+/* Footer Section */
+footer { padding: 2rem 0; background-color: var(--gray); text-align: center; font-size: 0.9rem; }
