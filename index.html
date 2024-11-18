@@ -28,8 +28,10 @@
             <img src="images/hero-2.jpg" alt="About Image" class="about-image">
             <div class="about-text">
                 <h1>ЧТО ЭТО?</h1>
-                <p>Проект "Я МУЖЧИНА" направлен на развитие мужчин. Уникальный опыт, проверенный и основанный на результатах.</p>
-                <p>Программа Дмитрия Алексеева и его команды.</p>
+                <p>«Я МУЖЧИНА» — это закрытый терапевтический клуб для мужчин, которые стремятся к развитию, хотят разобраться с внутренними барьерами и выйти на новый уровень в личной и профессиональной жизни</p>
+                <p>Я создал данный проект для тех, кто хочет выйти за рамки обыденного, открыть свои внутренние ресурсы и стать увереннее в себе. Это программа, основанная на моем опыте и опыте тех, кто уже прошел этот путь и добился значительных изменений.</p>
+                <p>Здесь нет теории, только проверенные практики и работающие методики. Каждый участник получает не только поддержку группы, но и уникальные инструменты для решения своих жизненных задач.</p>
+                <p>Дмитрий Алексеев, автор проекта.</p>
             </div>
         </div>
     </section>
@@ -37,7 +39,7 @@
     <!-- Results Section -->
     <section class="results section">
         <div class="container">
-            <h2>РЕЗУЛЬТАТЫ</h2>
+            <h2>РЕЗУЛЬТАТЫ ПРОШЛОГО ПОТОКА</h2>
             <div class="results-grid">
                 <div class="result-item">
                     <img src="icons/income.svg" alt="Доход" class="icon">
@@ -53,7 +55,7 @@
                 </div>
                 <div class="result-item">
                     <img src="icons/happiness.svg" alt="Счастье" class="icon">
-                    <p>Счастье и уверенность в жизни</p>
+                    <p>Счастье и уверенность в&nbsp;жизни</p>
                 </div>
             </div>
         </div>
@@ -106,6 +108,38 @@
         </div>
     </section>
 
+    <!-- Team Section -->
+<section class="team section">
+    <div class="container">
+        <h2>КОМАНДА</h2>
+        <div class="carousel">
+            <!-- Carousel Item -->
+            <div class="carousel-item">
+                <img src="images/team-member-1.jpg" alt="Team Member 1" class="team-image">
+                <h3>Дмитрий Алексеев, 46 лет</h3>
+                <h4>Ведущий</h4>
+                <p>Опытный педагог и тренер. Управленческий опыт 20 лет. Руководитель благотворительных фондов
+                    5 лет. Собственник бизнеса, опыт 10 лет.
+                    Специалист в области программ реабилитации зависимых. Автор и ведущий более 100
+                    трансформационных тренингов.
+                    Телесный терапевт. Звуковой терапевт.
+                    Сертифицированный преподаватель йоги.
+                    Более 10 лет назад создал направление: «Йога от зависимостей».</p>
+            </div>
+            <div class="carousel-item">
+                <img src="images/team-member-2.jpg" alt="Team Member 2" class="team-image">
+                <h3>Имя Фамилия, возраст</h3>
+                <p>Абзац текста о том, что за человек. Абзац текста о том, что за человек. Абзац текста о том, что за человек.</p>
+            </div>
+            <div class="carousel-item">
+                <img src="images/team-member-3.jpg" alt="Team Member 3" class="team-image">
+                <h3>Имя Фамилия, возраст</h3>
+                <p>Абзац текста о том, что за человек. Абзац текста о том, что за человек. Абзац текста о том, что за человек.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
     <!-- Call to Action Section -->
     <section class="call-to-action section">
         <div class="container">
@@ -129,4 +163,15 @@
     </footer>
 
 </body>
+<script>
+    document.querySelectorAll('.carousel').forEach((carousel) => {
+        carousel.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            carousel.scrollBy({
+                left: e.deltaY > 0 ? 100 : -100,
+                behavior: 'smooth',
+            });
+        });
+    });
+</script>
 </html>
