@@ -51,14 +51,14 @@ button:hover { background: #d94444; }
 .hero-text {
     max-width: 500px; /* Adjust as needed */
 }
-h1 { font-size: 3rem; margin-bottom: 1rem; 
+h1 { font-size: 2.5rem; margin-bottom: 1rem; 
     font-family: "Russo One", serif;
     font-optical-sizing: 10;
     font-weight: 300;
     font-style: normal;
 
 }
-.hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto; }
+.hero p { font-size: 1rem; max-width: 800px; margin: 0 auto; }
 
 /* About the Program Section */
 .about p { font-size: 1rem; max-width: 800px; margin: 1rem auto; color: #aaa; }
@@ -149,16 +149,13 @@ h2 {
     padding-bottom: 3rem;
 }
 
-.team {
-    text-align: center;
-    background-color: black;
-    color: white;
-    padding: 3rem 0;
-}
-
 .swiper {
     padding-top: 2rem;
 
+}
+
+.teamh2 {
+    font-size: 2.5rem;
 }
 
 .swiper-slide {
@@ -173,6 +170,8 @@ h2 {
     font-weight: 400;
     font-style: normal;
     padding-bottom: 1rem;
+    padding-top: 1rem;
+    font-size: 1.3rem;
 }
 
 .swiper-slide h4 {
@@ -184,14 +183,17 @@ h2 {
 
 
 .image-container {
-    width: 300px; /* Set the desired width for the image */
-    height: 300px; /* Maintain a square container */
+    width: 250px; /* Set the desired width for the image */
+    height: 250px; /* Maintain a square container */
     border-radius: 15px; /* Rounded corners for the rectangle */
     overflow: hidden; /* Ensure the image doesn't spill out */
     margin: 0 auto 1rem; /* Center the image and add spacing below */
     background-color: #333; /* Optional background color for the rectangle */
     display: flex;
     align-items: center;
+    display: flex;
+    justify-content: center; /* Horizontally center the image */
+    align-items: center; /* Vertically center the image */
 }
 
 .image-container img {
@@ -222,7 +224,7 @@ h2 {
 
 .image-4 img{
     position: relative;
-    top: -50px;
+    top: -30px;
     right:0px;
 }
 
@@ -235,7 +237,7 @@ h2 {
 .swiper-button-next,
 .swiper-button-prev {
     position: absolute; /* Position the arrows absolutely within the container */
-    top: 240px; /* Align vertically to the middle of the container */
+    top: 210px; /* Align vertically to the middle of the container */
     transform: translateY(-50%); /* Offset by 50% of the element height */
     color: #fff; /* Change arrow color */
     font-size: 20px; /* Adjust arrow size */
@@ -245,6 +247,15 @@ h2 {
     transition: opacity 0.3s ease; /* Add hover effect */
     z-index: 10;
 }
+
+.swiper-button-prev {
+    left: 35px; /* Adjust as needed to move further away */
+}
+
+.swiper-button-next {
+    right: 35px;
+}
+
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
@@ -272,6 +283,7 @@ h2 {
     line-height: 1.5; /* Improve readability */
     color: #fff; /* Adjust text color to match your design */
 }
+
 
 /* Desktop Layout hero */
 @media (min-width: 768px) {
