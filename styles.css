@@ -161,9 +161,7 @@ h1 { font-size: 2.5rem; margin-bottom: 1rem;
     }
 }
 
-.faq-program .about-content {
-    gap: 2rem; /* Space between text and image on desktop */
-}
+
 @media (max-width: 1024px) {
     .faq-program .about-content {
         gap: 1.5rem; /* Adjust for tablet */
@@ -217,6 +215,10 @@ h1 { font-size: 2.5rem; margin-bottom: 1rem;
     text-align: left;
 }
 
+.about-text-faq p:last-of-type {
+    margin-bottom: 0;
+}
+
 
 p, ul li {
     font-family: "Montserrat", sans-serif;
@@ -238,6 +240,11 @@ p, ul li {
     align-items: center;
     padding: 2rem;
     border-radius: 10px;
+}
+
+.result-item p {
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 .icon {
     width: 100px;
@@ -275,7 +282,6 @@ h2 {
     font-family: "Russo One", sans-serif;
     font-weight: 400;
     font-size: 1.8rem;
-    margin-bottom: 2rem;
 }
 
 .topics-list {
@@ -305,6 +311,11 @@ h2 {
         margin: 0 auto; /* Center-align the list block */
         padding-left: 50px;
     }
+}
+
+.faq-program .about-text-faq {
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 .swiper-slide {
