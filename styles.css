@@ -6,7 +6,7 @@ a { text-decoration: none; color: inherit; }
 /* Layout */
 .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 2rem 0; }
 .section { padding: 3rem 0; text-align: center; border-bottom: 1px solid #333; }
-
+.container2 { width: 90%; max-width: 1200px; margin: 0 auto;}
 /* Accent & Buttons */
 :root {
     --accent: #f05454; /* Change this for a different accent color */
@@ -25,7 +25,6 @@ button {
 }
 
 button:hover { background: #d94444; }
-
 
 
 /* Hero Section */
@@ -63,12 +62,26 @@ h1 { font-size: 2.5rem; margin-bottom: 1rem;
 /* About the Program Section */
 .about p { font-size: 1rem; max-width: 800px; margin: 1rem auto; color: #aaa; }
 
+.hero p:last-of-type {
+    font-weight: bold;
+    margin-bottom: 0; /* Optional: Remove extra space after the last paragraph */
+    padding-top: 1.5rem;
+}
+
 /* About the Program Section */
 .about-program {
     background: black;
     color: #fff;
     border-bottom: 1px solid #333; /* Adds the separator line */
-    padding-bottom: rem; /* Optional: Adjust padding for spacing */
+    padding-bottom: 4rem; /* Optional: Adjust padding for spacing */
+}
+
+.faq-program {
+    background: black;
+    color: #fff;
+    border-bottom: 1px solid #333; /* Adds the separator line */
+    padding-bottom: 4rem; /* Optional: Adjust padding for spacing */
+    padding-top: 4rem;
 }
 
 .about-content {
@@ -93,12 +106,16 @@ h1 { font-size: 2.5rem; margin-bottom: 1rem;
     max-height: 800px; /* Adjust height as needed */
     object-fit: cover;
     object-position: 1% 1%;
-    border-radius: 50px;
+    border-radius: 10px;
 }
 
 .about-text {
     text-align: left;
     max-width: 90%;
+}
+
+.about-text-faq h1 {
+    padding-top: 1rem;
 }
 
 .about-text h1 {
@@ -114,6 +131,92 @@ h1 { font-size: 2.5rem; margin-bottom: 1rem;
     font-style: italic; /* Makes the last paragraph italic */
     margin-bottom: 0; /* Optional: Remove extra space after the last paragraph */
 }
+
+.about-text-faq {
+    max-width: 100%; /* For desktop, set a readable width */
+    margin: 0 auto; /* Center align */
+}
+@media (max-width: 1024px) {
+    .about-text-faq {
+        max-width: 75%; /* Expand text width on tablet */
+    }
+}
+@media (max-width: 768px) {
+    .about-text-faq {
+        max-width: 100%; /* Make full width on mobile */
+        margin: 0 auto 2rem; /* Add spacing below */
+    }
+}
+
+@media (max-width: 768px) {
+    .faq-program .about-content {
+        text-align: center; /* Center align text */
+    }
+    .faq-program .about-image {
+        max-width: 100%; /* Make image responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+    .faq-program .about-text-faq {
+        max-width: 100%; /* Keep text width manageable */
+    }
+}
+
+.faq-program .about-content {
+    gap: 2rem; /* Space between text and image on desktop */
+}
+@media (max-width: 1024px) {
+    .faq-program .about-content {
+        gap: 1.5rem; /* Adjust for tablet */
+    }
+}
+@media (max-width: 768px) {
+    .faq-program .about-content {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center align */
+    }
+}
+
+@media (max-width: 768px) {
+    .faq-program .about-content {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center; /* Center-align for better aesthetics */
+    }
+
+    .faq-program .about-text-faq {
+        text-align: center; /* Center-align the text for readability */
+        padding: 0 1rem; /* Add horizontal padding to prevent edge clipping */
+        margin-top: 1rem; /* Space below the image */
+    }
+
+    .faq-program .about-image {
+        order: -1; /* Move the image above the text */
+        width: 100%; /* Ensure the image spans the container */
+        max-width: 90%; /* Prevent it from being too wide */
+        margin-bottom: 1rem; /* Space between the image and text */
+    }
+}
+
+
+.about-text-faq h1 {
+    padding-top: 3rem;
+    text-align: left;
+}
+
+@media (max-width: 500px) {
+    .about-text-faq h1 {
+    padding-top: 0;
+    }
+}
+
+
+
+.about-text-faq p {
+    margin-bottom: 1.5rem; /* Adds space between paragraphs */
+    line-height: 1.6; /* Improves readability */
+    max-width: 25rem;
+    text-align: left;
+}
+
 
 p, ul li {
     font-family: "Montserrat", sans-serif;
@@ -147,6 +250,7 @@ h2 {
     font-weight: 400;
     font-style: normal;
     padding-bottom: 3rem;
+    font-size: 1.7rem;
 }
 
 .swiper {
@@ -156,6 +260,51 @@ h2 {
 
 .teamh2 {
     font-size: 2.5rem;
+}
+
+/* Topics Section Styling */
+.topics {
+    background-color: #000; /* Adjust background as needed */
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center; /* Center-align content */
+}
+
+.topics h2 {
+    text-align: center;
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.topics-list {
+    list-style-type: disc;
+    margin: 0 auto; /* Center align the list container */
+    padding: 0;
+    max-width: 800px; /* Limit the width for better readability */
+    column-gap: 2rem;
+    text-align: left;
+    padding-bottom: 2rem;
+}
+
+/* Two Columns for Tablet and Desktop */
+@media (min-width: 768px) {
+    .topics-list {
+        column-count: 2; /* Split into two columns */
+        text-align: left; /* Ensure text stays aligned left in columns */
+        padding-left: 20px;
+    }
+}
+
+/* Single Column for Mobile */
+@media (max-width: 767px) {
+    .topics-list {
+        column-count: 1; /* Single column for mobile */
+        text-align: left; /* Center-align the list items */
+        margin: 0 auto; /* Center-align the list block */
+        padding-left: 50px;
+    }
 }
 
 .swiper-slide {
@@ -248,6 +397,8 @@ h2 {
     z-index: 10;
 }
 
+
+
 .swiper-button-prev {
     left: 35px; /* Adjust as needed to move further away */
 }
@@ -270,6 +421,19 @@ h2 {
 .swiper-pagination-bullet {
     background: #fff;
 }
+
+.swiper-pagination {
+    position: absolute;
+
+}
+
+.swiper-pagination {
+    position: relative; /* Ensure it stays within the Swiper container */
+    transform: translateY(60%); /* Align the center point */
+    z-index: 20; /* Ensure it is above other elements */
+}
+
+
 
 .swiper-slide ul {
     padding-left: 20px; /* Add padding for better indentation */
@@ -310,11 +474,22 @@ h2 {
 /* Desktop view for Swiper arrows */
 @media (min-width: 1024px) {
     .swiper-button-next {
-        right: 7px; /* Move further to the right */
+        right: 20px; /* Move further to the right */
     }
 
     .swiper-button-prev {
-        left: 7px;
+        left: 20px;
+    }
+}
+
+/* Desktop view for Swiper arrows */
+@media (max-width: 500px) {
+    .swiper-button-next {
+        right: 35px; /* Move further to the right */
+    }
+
+    .swiper-button-prev {
+        left: 35px; /* Move further to the left */
     }
 }
 
