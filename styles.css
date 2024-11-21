@@ -69,8 +69,8 @@ h1 { font-size: 2.5rem; margin-bottom: 1rem;
     background: black;
     color: #fff;
     border-bottom: 1px solid #333; /* Adds the separator line */
-    padding-bottom: 4rem; /* Optional: Adjust padding for spacing */
-    padding-top: 4rem;
+    padding-bottom: 5rem; /* Optional: Adjust padding for spacing */
+    padding-top: 5rem;
 }
 
 .about-content {
@@ -122,17 +122,18 @@ h1 { font-size: 2.5rem; margin-bottom: 1rem;
 }
 
 .about-text-faq {
-    max-width: 100%; /* For desktop, set a readable width */
+    text-align: left;
+    max-width: 90%; /* For desktop, set a readable width */
     margin: 0 auto; /* Center align */
 }
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
     .about-text-faq {
-        max-width: 75%; /* Expand text width on tablet */
+        max-width: 120%; /* Expand text width on tablet */
     }
 }
 @media (max-width: 768px) {
     .about-text-faq {
-        max-width: 100%; /* Make full width on mobile */
+        max-width: 90%; /* Make full width on mobile */
         margin: 0 auto 2rem; /* Add spacing below */
     }
 }
@@ -150,12 +151,6 @@ h1 { font-size: 2.5rem; margin-bottom: 1rem;
     }
 }
 
-
-@media (max-width: 1024px) {
-    .faq-program .about-content {
-        gap: 1.5rem; /* Adjust for tablet */
-    }
-}
 @media (max-width: 768px) {
     .faq-program .about-content {
         flex-direction: column; /* Stack content vertically */
@@ -170,7 +165,7 @@ h1 { font-size: 2.5rem; margin-bottom: 1rem;
     }
 
     .faq-program .about-text-faq {
-        text-align: center; /* Center-align the text for readability */
+        text-align: left; /* Center-align the text for readability */
         padding: 0 1rem; /* Add horizontal padding to prevent edge clipping */
         margin-top: 1rem; /* Space below the image */
     }
@@ -179,7 +174,6 @@ h1 { font-size: 2.5rem; margin-bottom: 1rem;
         order: -1; /* Move the image above the text */
         width: 100%; /* Ensure the image spans the container */
         max-width: 90%; /* Prevent it from being too wide */
-        margin-bottom: 1rem; /* Space between the image and text */
     }
 }
 
@@ -255,15 +249,22 @@ h2 {
 }
 
 .teamh2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+
+.container2 p:last-of-type {
+    font-style: normal;
 }
 
 /* Topics Section Styling */
 .topics {
     background-color: #000; /* Adjust background as needed */
     color: #fff;
-    padding: 2rem 0;
+    padding: 2rem;
     text-align: center; /* Center-align content */
+    margin-top: 1rem;
+    padding-bottom: 3rem;
 }
 
 .topics h2 {
@@ -280,7 +281,6 @@ h2 {
     max-width: 800px; /* Limit the width for better readability */
     column-gap: 2rem;
     text-align: left;
-    padding-bottom: 2rem;
 }
 
 /* Two Columns for Tablet and Desktop */
@@ -302,10 +302,6 @@ h2 {
     }
 }
 
-.faq-program .about-text-faq {
-    margin: 0 !important;
-    padding: 0 !important;
-}
 
 .swiper-slide {
     background-color: #1a1a1a;
@@ -328,6 +324,10 @@ h2 {
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
+}
+
+.swiper-slide ul li {
+    font-size: 0.9rem;
 }
 
 /* Call-to-Action Section */
@@ -361,9 +361,11 @@ h2 {
 
 .call-to-action p {
     font-family: "Montserrat", sans-serif;
-    font-size: 1rem;
+    font-weight: 600;
+    font-size: 1.3rem;
     line-height: 1.5;
-    margin-bottom: 2rem;
+    margin-bottom: 3.5rem;
+    margin-top: 3rem;
 }
 
 .pricing-grid {
@@ -376,21 +378,24 @@ h2 {
 }
 
 .pricing-card {
-    background-color: #2e2e2e;
+    border: #ffffff 1px solid;
     padding: 2rem;
     border-radius: 15px;
-    text-align: center;
-    width: 100%;
     width: 300px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction: column; /* Arrange content vertically */
-    justify-content: space-between; /* Evenly distribute content */
-    flex: 1; /* Ensure equal height for all cards */
+    display: flex; /* Enable Flexbox */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text alignment */
+    height: 100%; /* Ensure the card spans the full height */
+    gap: 0.5rem; /* Optional: Add space between elements */
 }
 
-.pricing-card:first-of-type {
-    background-color: #555555;
+.pricing-card h3,
+.pricing-card h4,
+.pricing-card p {
+    margin: 0; /* Reset default margins */
 }
 
 .pricing-card h3 {
@@ -398,52 +403,54 @@ h2 {
     font-size: 1.5rem;
     font-weight: bold;
     color: white;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
 }
 
 .pricing-card h4 {
     font-family: "Montserrat", sans-serif;
     font-size: 2rem;
     color: #ffffff;
-    margin-bottom: 1rem;
 }
 
 .pricing-card p {
     font-family: "Montserrat", sans-serif;
     font-size: 0.9rem;
     color: #ccc;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 /* Ensure consistency across breakpoints */
-@media (min-width: 768px) {
+/*/ @media (min-width: 768px) {
     .pricing-card {
-        max-width: 400px;
+        max-width: 600px;
     }
     /* Target the last card specifically */
-    .pricing-card:last-of-type h3 {
+    /*.pricing-card:last-of-type h3 {
         margin-bottom: 0rem;
     }
 
-    .pricing-card:last-of-type h4 {
+    /*.pricing-card:last-of-type h4 {
         margin-top: 5.5rem;
-/
+
     }
 
     .pricing-card:last-of-type p {
         margin-top: 2rem;
 
     }
-}
+}*/
 
 @media (max-width: 768px) {
     .pricing-grid {
         flex-direction: column; /* Stack cards vertically */
     }
     .pricing-card {
-        width: 100%; /* Expand to full width */
-        max-width: 300px; /* Limit for better readability */
-        margin: 0 auto; /* Center-align on smaller screens */
+        display: flex; /* Enable Flexbox */
+        flex-direction: column; /* Arrange items vertically */
+        justify-content: center; /* Center items vertically */
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Align text */
+        height: 100%; /* Ensure the card takes up full height */
     }
 }
 
@@ -457,20 +464,35 @@ h2 {
     padding: 1rem 2rem; /* Adjust padding for button size */
     font-size: 1.5rem; /* Adjust text size */
     font-weight: bold;
-    color: #fff; /* Text color */
-    background-color: #006a00; /* Green background color */
-    border-radius: 30px; /* Rounded corners */
-    text-align: center; /* Center the text */
-    text-decoration: none; /* Remove underline */
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+    color: #fff; /* White text */
+    border: 2px solid #0088cc; /* Telegram Blue for the border */
+    border-radius: 50px;
+    background: transparent; /* No background */
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+    animation: glow 2s infinite; /* Add glowing effect */
     margin-top: 3rem;
 }
 
+
+
+
 .cta-button:hover {
-    transform: scale(1.1); /* Make the button larger */
-    background-color: #1e7a1e; /* Slightly darker green on hover */
+    transform: scale(1.1); /* Enlarges slightly on hover */
+    background: #0088cc; /* Adds blue background */
 }
 
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 10px #0088cc, 0 0 20px #0088cc, 0 0 30px #0088cc;
+    }
+    50% {
+        box-shadow: 0 0 20px #0088cc, 0 0 30px #0088cc, 0 0 40px #0088cc;
+    }
+}
 
 
 /* Responsive Design */
@@ -591,7 +613,7 @@ h2 {
 
 
 .swiper-slide ul {
-    padding-left: 20px; /* Add padding for better indentation */
+    padding-left: 30px; /* Add padding for better indentation */
     list-style-type: disc; /* Use bullet points */
     text-align: left;
     padding-top: 2rem;
@@ -659,8 +681,9 @@ h2 {
     }
 
     .about-text {
-        max-width: 50%;
+        max-width: 30rem;
         text-align: left;
+        margin-right: 1rem;
     }
 
     .about-content {
@@ -678,6 +701,8 @@ h2 {
         border-radius: 10px;
     }
 }
+
+
 /* Responsive Layout */
 @media (min-width: 768px) {
     .results-grid {
@@ -690,6 +715,78 @@ h2 {
         grid-template-columns: repeat(4, 1fr);
     }
 }
+
+/* Green Glow */
+.glow-effect-green {
+    animation: glow-breathing-green 2s infinite;
+}
+
+@keyframes glow-breathing-green {
+    0%, 100% {
+        filter: drop-shadow(0 0 10px rgba(25, 206, 9, 0.8)) drop-shadow(0 0 20px rgba(25, 206, 9, 0.8));
+    }
+    50% {
+        filter: drop-shadow(0 0 20px rgba(25, 206, 9, 0.8)) drop-shadow(0 0 40px rgba(25, 206, 9, 0.8));
+    }
+}
+
+/* Blue Glow */
+.glow-effect-blue {
+    animation: glow-breathing-blue 2s infinite;
+}
+
+@keyframes glow-breathing-blue {
+    0%, 100% {
+        filter: drop-shadow(0 0 10px rgba(0, 122, 255, 0.8)) drop-shadow(0 0 20px rgba(0, 122, 255, 0.8));
+    }
+    50% {
+        filter: drop-shadow(0 0 20px rgba(0, 122, 255, 0.8)) drop-shadow(0 0 40px rgba(0, 122, 255, 0.8));
+    }
+}
+
+/* Orange Glow */
+.glow-effect-orange {
+    animation: glow-breathing-orange 2s infinite;
+}
+
+@keyframes glow-breathing-orange {
+    0%, 100% {
+        filter: drop-shadow(0 0 10px rgba(255, 165, 0, 0.8)) drop-shadow(0 0 20px rgba(255, 165, 0, 0.8));
+    }
+    50% {
+        filter: drop-shadow(0 0 20px rgba(255, 165, 0, 0.8)) drop-shadow(0 0 40px rgba(255, 165, 0, 0.8));
+    }
+}
+
+/* Red Glow */
+.glow-effect-red {
+    animation: glow-breathing-red 2s infinite;
+}
+
+@keyframes glow-breathing-red {
+    0%, 100% {
+        filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.8)) drop-shadow(0 0 20px rgba(255, 0, 0, 0.8));
+    }
+    50% {
+        filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.8)) drop-shadow(0 0 40px rgba(255, 0, 0, 0.8));
+    }
+}
+
+/* Yellow Glow */
+.glow-effect-yellow {
+    animation: glow-breathing-yellow 2s infinite;
+}
+
+@keyframes glow-breathing-yellow {
+    0%, 100% {
+        filter: drop-shadow(0 0 10px rgba(255, 255, 0, 0.8)) drop-shadow(0 0 20px rgba(255, 255, 0, 0.8));
+    }
+    50% {
+        filter: drop-shadow(0 0 20px rgba(255, 255, 0, 0.8)) drop-shadow(0 0 40px rgba(255, 255, 0, 0.8));
+    }
+
+}
+
 
 /* Footer Section */
 footer { padding: 2rem 0; background-color: #141414; text-align: center; font-size: 0.9rem; }
