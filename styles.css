@@ -465,8 +465,8 @@ h2 {
     font-size: 1.5rem; /* Adjust text size */
     font-weight: bold;
     color: #fff; /* White text */
-    border: 2px solid #0088cc; /* Telegram Blue for the border */
-    border-radius: 50px;
+    border: 0px solid #0088cc; /* Telegram Blue for the border */
+    border-radius: 25px;
     background: transparent; /* No background */
     text-align: center;
     cursor: pointer;
