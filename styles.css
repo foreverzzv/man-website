@@ -288,7 +288,7 @@ h2 {
     .topics-list {
         column-count: 2; /* Split into two columns */
         text-align: left; /* Ensure text stays aligned left in columns */
-        padding-left: 20px;
+        padding-left: 30px;
     }
 }
 
@@ -298,7 +298,7 @@ h2 {
         column-count: 1; /* Single column for mobile */
         text-align: left; /* Center-align the list items */
         margin: 0 auto; /* Center-align the list block */
-        padding-left: 50px;
+        padding-left: 30px;
     }
 }
 
@@ -362,7 +362,7 @@ h2 {
 .call-to-action p {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
-    font-size: 1.3rem;
+    font-size: 1.15rem;
     line-height: 1.5;
     margin-bottom: 3.5rem;
     margin-top: 3rem;
@@ -790,3 +790,12 @@ h2 {
 
 /* Footer Section */
 footer { padding: 2rem 0; background-color: #141414; text-align: center; font-size: 0.9rem; }
+
+footer p a[href="https://t.me/alekseevschool"] {
+    color: #27A7E7
+}
+
+footer p:last-of-type {
+    font-size: 0.7rem;
+    opacity: 50%;
+}
